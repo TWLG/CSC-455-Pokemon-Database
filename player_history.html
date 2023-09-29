@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pokemon</title>
+	<meta charset ="utf-8"> 
+</head>
+<body>
+	<h2>Look Up Player Match History</h2>
+	<p>"SELECT p.name, b.battleID, b.gymID, b.result as match_result FROM player p join player_match_history pmh on p.playerID = pmh.playerID join battles b on b.battleID = pmh.battleID where p.name Like CONCAT('%', ?, '%')"
+
+	<a href="index.html"><button>Back</button></a>
+	<button onClick="window.location.reload();">Refresh Page</button>
+	<form action = "player_match_data.php" method="get">
+		<h2>Enter the player name:</h2> <input type="text" name = "name">
+		<input type="submit" value="Search">
+	</form>
+</body>
+</html>

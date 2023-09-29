@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pokemon</title>
+	<meta charset ="utf-8"> 
+</head>
+<body>
+	<h2>Look Up Player Match Total</h2>
+	<p>"SELECT playerID, match_count(?)
+FROM player_match_history;"</p>
+
+	<a href="index.html"><button>Back</button></a>
+	<button onClick="window.location.reload();">Refresh Page</button>
+	<form action = "player_match_count.php" method="get">
+		<h2>Enter the playerID:</h2> <input type="text" name = "name">
+		<input type="submit" value="Search">
+	</form>
+<p>here are some playerIDs so you dont need to go look</p>
+<p>123 234 345 456 567 678</p>
+</body>
+</html>
